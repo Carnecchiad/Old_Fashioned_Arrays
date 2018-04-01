@@ -17,6 +17,7 @@ public class ArrayManipulation {
 				"intrigued", "absorbed", "inquisitive", "nosy", "snoopy",
 				"engrossed", "curious" };
 		Sorting.sort(testArray);
+		
 		assertEquals("absorbed", testArray[0]);
 		assertEquals("affected", testArray[1]);
 		assertEquals("concerned", testArray[2]);
@@ -58,12 +59,17 @@ public class ArrayManipulation {
 		int[] inputArrayCopy = Arrays.copyOf(testArray, 100);
 		
 		int[] actualOutputArray = Inserting.insertAt(testArray, 73, 42);
+		
 		assertEquals(42, actualOutputArray[73]);
 		for (int i = 0; i < 73; ++ i) {
 			assertEquals(inputArrayCopy[i], actualOutputArray[i]);
+			System.out.println(actualOutputArray[i]);
+			System.out.println(inputArrayCopy[i]); 
+			
 		}
 		for (int i = 74; i < 101; ++ i) {
 			assertEquals(inputArrayCopy[i-1], actualOutputArray[i]);
+			
 		}
 	}
 
