@@ -6,13 +6,20 @@ import org.junit.Test;
 
 public class CustomArrayListTest {
 
+	
+	public static void main(String[] args) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		list.add(1);
+		System.out.println(list.get(0));
+	}
 	@Test
 	public void testAddAndGet() {
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		list.add(0);
 		list.add(1);
 		list.add(206);
-	
+		
+		
 		if(list.get(0) != 0) fail("list.get(0) returning improper value.");
 		if(list.get(1) != 1) fail("list.get(1) returning improper value.");
 		if(list.get(2) != 206) fail("list.get(2) returning improper value.");
